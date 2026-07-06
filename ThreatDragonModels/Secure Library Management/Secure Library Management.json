@@ -19,8 +19,8 @@
         "cells": [
           {
             "position": {
-              "x": 150,
-              "y": 130
+              "x": 140,
+              "y": 40
             },
             "size": {
               "width": 140,
@@ -28,7 +28,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Utilisateur (USER)"
+                "text": "User (USER)"
               },
               "body": {
                 "stroke": "#333333",
@@ -124,7 +124,7 @@
             "id": "8955bd9d-3e16-4694-80ed-3f48e741b10a",
             "data": {
               "type": "tm.Actor",
-              "name": "Utilisateur (USER)",
+              "name": "User (USER)",
               "description": "",
               "isTrustBoundary": false,
               "outOfScope": false,
@@ -137,7 +137,7 @@
           {
             "position": {
               "x": 713,
-              "y": 130
+              "y": 40
             },
             "size": {
               "width": 220,
@@ -145,7 +145,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Bibliothécaire (LIBRARIAN)"
+                "text": "Librarian Admin (LIBRARIAN)"
               },
               "body": {
                 "stroke": "#333333",
@@ -241,7 +241,7 @@
             "id": "8679e6db-5e34-4d34-86c6-e1813dbc7cb5",
             "data": {
               "type": "tm.Actor",
-              "name": "Bibliothécaire (LIBRARIAN)",
+              "name": "Librarian Admin (LIBRARIAN)",
               "description": "",
               "isTrustBoundary": false,
               "outOfScope": false,
@@ -382,7 +382,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Gestion des livres"
+                "text": "Book management"
               },
               "body": {
                 "stroke": "#333333",
@@ -478,7 +478,7 @@
             "id": "d6f35d41-be08-4a6c-80bd-5d26881062b8",
             "data": {
               "type": "tm.Process",
-              "name": "Gestion des livres",
+              "name": "Book management",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -502,7 +502,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Gestion des emprunts"
+                "text": "\nLoan management"
               },
               "body": {
                 "stroke": "#333333",
@@ -598,7 +598,7 @@
             "id": "e9585ecb-597d-49f1-aaa4-5de6a195be86",
             "data": {
               "type": "tm.Process",
-              "name": "Gestion des emprunts",
+              "name": "\nLoan management",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -755,7 +755,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Requête HTTP",
+              "name": "HTTP request",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -769,7 +769,7 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Requête HTTP"
+              "HTTP request"
             ],
             "id": "67b81122-b3b6-463b-88ac-84641a9db197",
             "source": {
@@ -779,6 +779,228 @@
             "target": {
               "cell": "03a402cc-d1e5-410e-9c7c-ab927cdbb320",
               "port": "dbcfd64f-6af1-4f78-a5da-7024187cabd5"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "HTTP request",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "HTTP request"
+            ],
+            "id": "baacf76c-d494-4998-a9e3-4ecf27b4a7b3",
+            "source": {
+              "cell": "8679e6db-5e34-4d34-86c6-e1813dbc7cb5",
+              "port": "ffff6658-44dc-4fec-8272-99956134face"
+            },
+            "target": {
+              "cell": "e9585ecb-597d-49f1-aaa4-5de6a195be86",
+              "port": "dbcfd64f-6af1-4f78-a5da-7024187cabd5"
+            },
+            "vertices": [
+              {
+                "x": 750,
+                "y": 190
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              ""
+            ],
+            "id": "8be6deee-c4c8-4bb3-b37a-755d6ea3fe4c",
+            "source": {
+              "cell": "03a402cc-d1e5-410e-9c7c-ab927cdbb320",
+              "port": "d60056bf-e585-45dd-946e-eca0738ff7dc"
+            },
+            "target": {
+              "cell": "34671615-7f3c-4452-ae09-15905f36d565",
+              "port": "8a1e4299-f5fd-491d-8dc4-2fe64e44d073"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "read / write",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "read / write"
+            ],
+            "id": "9769c89f-05c0-4ebd-a4b4-301f7c2013f3",
+            "source": {
+              "cell": "d6f35d41-be08-4a6c-80bd-5d26881062b8",
+              "port": "d60056bf-e585-45dd-946e-eca0738ff7dc"
+            },
+            "target": {
+              "cell": "34671615-7f3c-4452-ae09-15905f36d565",
+              "port": "8a1e4299-f5fd-491d-8dc4-2fe64e44d073"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              ""
+            ],
+            "id": "f0178d9e-b14f-4cf7-8cb4-258ec7f67c68",
+            "source": {
+              "cell": "e9585ecb-597d-49f1-aaa4-5de6a195be86",
+              "port": "d60056bf-e585-45dd-946e-eca0738ff7dc"
+            },
+            "target": {
+              "cell": "34671615-7f3c-4452-ae09-15905f36d565",
+              "port": "8a1e4299-f5fd-491d-8dc4-2fe64e44d073"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 11,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [],
+              "containedElements": []
+            },
+            "labels": [
+              "Trust Boundary"
+            ],
+            "id": "d5c2f56f-5469-4a4d-990c-fb9a0c58e643",
+            "source": {
+              "x": 150,
+              "y": 240
+            },
+            "target": {
+              "x": 920,
+              "y": 240
             },
             "vertices": []
           }
