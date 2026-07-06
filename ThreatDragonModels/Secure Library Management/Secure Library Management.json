@@ -1,0 +1,16 @@
+{
+  "version": "2.6.2",
+  "summary": {
+    "title": "Secure Library Management",
+    "owner": "Cyrine Fendi, Rayana Maktout, Angela Balendran",
+    "description": "Application web de gestion de bibliothèque (Spring Boot). Modélisation des menaces DFD + STRIDE.",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [],
+    "diagramTop": 0,
+    "reviewer": "",
+    "threatTop": 0
+  }
+}
