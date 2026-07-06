@@ -38,6 +38,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -121,7 +122,6 @@
               ]
             },
             "id": "8955bd9d-3e16-4694-80ed-3f48e741b10a",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "Utilisateur (USER)",
@@ -155,6 +155,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -238,7 +239,6 @@
               ]
             },
             "id": "8679e6db-5e34-4d34-86c6-e1813dbc7cb5",
-            "zIndex": 2,
             "data": {
               "type": "tm.Actor",
               "name": "Bibliothécaire (LIBRARIAN)",
@@ -272,6 +272,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -355,7 +356,6 @@
               ]
             },
             "id": "03a402cc-d1e5-410e-9c7c-ab927cdbb320",
-            "zIndex": 3,
             "data": {
               "type": "tm.Process",
               "name": "Authentification",
@@ -392,6 +392,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -475,7 +476,6 @@
               ]
             },
             "id": "d6f35d41-be08-4a6c-80bd-5d26881062b8",
-            "zIndex": 4,
             "data": {
               "type": "tm.Process",
               "name": "Gestion des livres",
@@ -512,6 +512,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 5,
             "ports": {
               "groups": {
                 "top": {
@@ -595,7 +596,6 @@
               ]
             },
             "id": "e9585ecb-597d-49f1-aaa4-5de6a195be86",
-            "zIndex": 5,
             "data": {
               "type": "tm.Process",
               "name": "Gestion des emprunts",
@@ -635,6 +635,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 6,
             "ports": {
               "groups": {
                 "top": {
@@ -718,7 +719,6 @@
               ]
             },
             "id": "34671615-7f3c-4452-ae09-15905f36d565",
-            "zIndex": 6,
             "data": {
               "type": "tm.Store",
               "name": "Base H2 (users, books, borrow_requests)",
@@ -734,6 +734,53 @@
               "storesInventory": false,
               "threats": []
             }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Requête HTTP",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Requête HTTP"
+            ],
+            "id": "67b81122-b3b6-463b-88ac-84641a9db197",
+            "source": {
+              "cell": "8955bd9d-3e16-4694-80ed-3f48e741b10a",
+              "port": "ffff6658-44dc-4fec-8272-99956134face"
+            },
+            "target": {
+              "cell": "03a402cc-d1e5-410e-9c7c-ab927cdbb320",
+              "port": "dbcfd64f-6af1-4f78-a5da-7024187cabd5"
+            },
+            "vertices": []
           }
         ]
       }
